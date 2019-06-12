@@ -256,7 +256,7 @@
                                    keys batchformkeys|nothing;
                                    linkparams python:keys and dict([(key, request.form[key]) for key in keys if key in request]) or request.form;
                                    url batch_base_url | string:${context/absolute_url}/${template_id}">
-                      <a tal:attributes="href python: '%s?%s' % (url, mq( linkparams, {'showAll':'y'} ))"
+                      <a tal:attributes="href python: '%s?%s' % (url, mq( linkparams, {'showAll':'y', 'approved': request.approved}))"
                          i18n:translate="description_pas_show_all_search_results">
                           Show all search results
                       </a>

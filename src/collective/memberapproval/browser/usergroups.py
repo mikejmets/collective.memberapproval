@@ -113,4 +113,5 @@ class UsersOverviewControlPanel(BaseUsersOverviewControlPanel):
 
         # Reset the request variable, just in case.
         self.request.set('__ignore_group_roles__', False)
+        self.request.set('approved', approved_status)
         return results
